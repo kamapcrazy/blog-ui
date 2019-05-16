@@ -1,21 +1,50 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header class="h-100">
+    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark black scrolling-navbar intro-fixed-nav" [containerInside]="true">
+        <mdb-navbar-brand>
+            <a class="logo navbar-brand" href="#"><strong>Navbar</strong></a>
+        </mdb-navbar-brand>
+        <links>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="[ '/home' ]">Home</a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="[ '/blog' ]">Blogs</a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="[ '/user' ]">Users</a>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
+    <!-- Main -->
+    <div class="view">
+      <div class="full-bg-img">
+          <div class="mask rgba-black-strong flex-center">
+              <div class="container text-center white-text">
+                  <div class="white-text text-center wow fadeInUp">
+                      <h2>This Navbar isn't fixed</h2>
+                      <h5>When you scroll down it will disappear</h5>
+                      <br>
+                      <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- /.Main -->
+</header>
 
-<router-outlet></router-outlet>
+<main class="text-center py-5 mt-3">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <router-outlet></router-outlet>
+
+            </div>
+        </div>
+    </div>
+
+  </main>
