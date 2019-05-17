@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // external libraries
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -25,14 +24,15 @@ import { BlogModule } from './blog/blog.module';
     HomeComponent
   ],
   imports: [
-    // core
+    // angular core
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
 
     // external libraries
     MDBBootstrapModule.forRoot(),
 
+    // internal
+    AppRoutingModule,
     BlogModule
   ],
   providers: [
