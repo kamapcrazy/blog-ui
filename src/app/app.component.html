@@ -1,54 +1,7 @@
 <header class="h-100">
-  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark black scrolling-navbar intro-fixed-nav"
-    [containerInside]="true">
-    <mdb-navbar-brand>
-      <a class="logo navbar-brand" href='#'><strong>Navbar</strong></a>
-    </mdb-navbar-brand>
-    <links>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
-          <a class="nav-link" [routerLink]="[ '/home' ]">Home</a>
-        </li>
-        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
-          <a class="nav-link" [routerLink]="[ '/blog' ]">Blogs</a>
-        </li>
-        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
-          <a class="nav-link" [routerLink]="[ '/user' ]">Users</a>
-        </li>
-      </ul>
-    </links>
-  </mdb-navbar>
-  <!-- Main -->
-  <div class="view">
-    <div class="full-bg-img">
-      <div class="mask rgba-black-strong flex-center">
-        <div class="container text-center white-text">
-          <div class="white-text text-center wow fadeInUp">
-            <h2>This Navbar isn't fixed</h2>
-            <h5>When you scroll down it will disappear</h5>
-            <br>
-            <p>Full page intro with background image will be always displayed in full screen mode, regardless of device
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /.Main -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="dark-font">
-          <mdb-breadcrumb>
-            <mdb-breadcrumb-item *ngFor="let breadcrumb of breadcrumbs; let last = last;">
-              <a *ngIf="!last" [routerLink]="[ breadcrumb.url ]"> {{breadcrumb.label}}</a>
-              <a *ngIf="last"> {{breadcrumb.label}}</a>
-            </mdb-breadcrumb-item>
-          </mdb-breadcrumb>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-app-routing></app-app-routing>
+ 
+  <app-bread-crumb></app-bread-crumb>
 </header>
 
 <main class="text-center py-5 mt-3">

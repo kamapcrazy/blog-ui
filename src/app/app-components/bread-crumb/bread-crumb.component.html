@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="dark-font">
+        <mdb-breadcrumb>
+          <mdb-breadcrumb-item *ngFor="let breadcrumb of breadcrumbs; let last = last;">
+            <a *ngIf="!last" [routerLink]="[ breadcrumb.url ]"> {{breadcrumb.label}}</a>
+            <a *ngIf="last"> {{breadcrumb.label}}</a>
+          </mdb-breadcrumb-item>
+        </mdb-breadcrumb>
+      </div>
+    </div>
+  </div>
+</div>
